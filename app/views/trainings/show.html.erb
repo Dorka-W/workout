@@ -5,5 +5,11 @@
   <%= @training.description %>
 </p>
 
+<p>
+  <strong>Cover:</strong>
+  <%= image_tag(@training.cover_url) if @training.cover? %>
+</p>
+
+
 <%= link_to 'Edit', edit_training_path(@training) %> |
 <%= link_to 'Back', trainings_path %>
