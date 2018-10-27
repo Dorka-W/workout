@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+How to run this?
 
-Things you may want to cover:
+Simply:
 
-* Ruby version
+1. bundle install
+1. rails db:migrate
+1. rails db:seed
+1. rails s
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The app should be running on default port(3000) and a default route is set.
