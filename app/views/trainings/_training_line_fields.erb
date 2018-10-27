@@ -1,0 +1,21 @@
+<div class="nested-fields">
+
+
+  <div class="field">
+    <%= f.label :excercise %>
+    <%= select_tag :excercise_id, options_from_collection_for_select(@excercises, "id", "name") %>
+  </div>
+
+  <div class="field">
+    <%= f.label :reps %>
+    <%= f.text_field :reps %>
+  </div>
+
+  <div class="field">
+    <%= f.label :series %>
+    <%= f.text_field :series %>
+  </div>
+
+  <%= link_to_remove_association "remove task", f %>
+
+</div>

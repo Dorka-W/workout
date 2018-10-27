@@ -15,10 +15,12 @@ class TrainingsController < ApplicationController
   # GET /trainings/new
   def new
     @training = Training.new
+    @excercises = Excercise.all
   end
 
   # GET /trainings/1/edit
   def edit
+    @excercises = Excercise.all
   end
 
   # POST /trainings
@@ -69,6 +71,6 @@ class TrainingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def training_params
-      params.require(:training).permit(:description, :cover)
+      params.require(:training).permit(:description, :cover, training_lines_attributes: [:id, :excercise_id, :reps, :series, :_destroy])
     end
 end
