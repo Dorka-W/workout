@@ -22,8 +22,9 @@
   </div>
 
   <h3>Excercises</h3>
+
   <div id="training_lines">
-    <% form.fields_for :training_lines do |training_line| %>
+    <%= form.fields_for :training_lines do |training_line| %>
     <%= render 'training_line_fields', f: training_line %>
     <% end %>
   </div>

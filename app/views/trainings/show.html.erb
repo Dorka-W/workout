@@ -12,7 +12,7 @@
 
 <% @training.training_lines.each_with_index do |line, index|  %>
   <p>
-    <em><%= index + 1 %></em> <%= line.excercise_id %> <%= line.reps %> <%= line.series %>
+    <em><%= index + 1 %></em> <%= line.excercise.name %> <%= line.reps %> <%= line.series %>
   </p>
 <% end %>
 
