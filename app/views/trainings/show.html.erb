@@ -10,6 +10,11 @@
   <%= image_tag(@training.cover_url) if @training.cover? %>
 </p>
 
+<% @training.training_lines.each_with_index do |line, index|  %>
+  <p>
+    <em><%= index + 1 %></em> <%= line.excercise_id %> <%= line.reps %> <%= line.series %>
+  </p>
+<% end %>
 
 <%= link_to 'Edit', edit_training_path(@training) %> |
 <%= link_to 'Back', trainings_path %>

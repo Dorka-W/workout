@@ -1,4 +1,4 @@
 class TrainingLine < ApplicationRecord
   belongs_to :training
-  has_one :excercise
+  belongs_to :excercise
 end

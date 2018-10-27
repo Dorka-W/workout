@@ -3,7 +3,7 @@
 
   <div class="field">
     <%= f.label :excercise %>
-    <%= select_tag :excercise_id, options_from_collection_for_select(@excercises, "id", "name") %>
+    <%= f.select :excercise_id, @excercises.collect {|p| [p.name, p.id] } %>
   </div>
 
   <div class="field">
